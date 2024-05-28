@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../vendor/css/bootstrap.min.css">
+    <!-- fontawsome css -->
+    <link rel="stylesheet" href="../vendor/css/all.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+    </head>
+
+<body>
+   
+    <div class="add-course">
+        <div class="container">
+            <h1>Add To Bag</h1>
+            <form action="">
+                <div class="mb-3">
+                    <label for="">Sweet name <span class="text-danger">*</span></label>
+                    <input class="inputs form-control" type="text" placeholder="sweet name" id="courseName">
+                    <div class="small text-danger"   id="nameAlert"></div>
+                </div>
+                <label for="">Sweet category</label>
+                <input class="inputs form-control" type="text" placeholder="sweet category" id="courseCategory">
+                <div class="small text-danger" id="catAlert">*please start with capital latter and catogoriy must be between3 and 20 chars</div>
+    
+                <label for="">Sweet price</label>
+                <input class="inputs form-control" type="number" placeholder="sweet price" id="coursePrice">
+                <div class="small text-danger" id="priceAlert">*please must be between 0-99</div>
+                <input type="submit" value="Add Sweet" class="btn btn-outline-secondary mt-3" disabled id="click" />
+                <input type="submit" value="Update Course" class="btn btn-outline-info mt-3" id="update" />
+                <button class="btn btn-outline-secondary mt-3" type="reset">clear</button>
+            </form>
+        </div>
+        <div class="container">
+            <input type="search" placeholder="search..." id="search" class="form-control my-3">
+            <table class="table table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>name</th>
+                        <th>category</th>
+                        <th>price</th>
+                        <th>description</th>
+                        <th>capacity</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+                <button id="deleteBtn" class="btn btn-outline-danger text-center my-3">delete all</button>
+                <!-- ------------ -->
+                <section class="portfolio" id="portfolio">
+                    <div class="container">
+                      <div class="d-flex justify-content-center">
+                        <div class="title position-relative">
+                          <h1 class="catg">"Sweet Treats Galore"</h1>
+                        </div>
+                      </div>
+                      <ul class="nav nav-tabs justify-content-center border-0 mt-5" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link rounded-pill active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Chocolate</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link rounded-pill" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cookies</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link rounded-pill" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Cake</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link rounded-pill" id="motion-tab" data-bs-toggle="tab" data-bs-target="#motion-tab-pane" type="button" role="tab" aria-controls="motion-tab-pane" aria-selected="false">Our</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content pt-5" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x17.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Chocolate and Goat Cheese Soufflé </h3>
+                                    <p>15$</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x18.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Salt Caramel Fudge Brownies</h3>
+                                    <p>40$</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x15.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Vegan Mulled Chocolate Cake</h3>
+                                    <p>50$</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x19.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Brown Butter Bourbon Pecan Chocolate Chunk Cookies</h3>
+                                    <p>5$ for peer</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x20.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">red velvet cookies</h3>
+                                    <p>5$ for peer</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x21.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Chocolate Marshmallow Swirl Cookies</h3>
+                                    <p>5$ for peer</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            
+                        </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x39.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Classic cake design</h3>
+                                    <p>50$</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x77.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Macaron Wedding Cakes</h3>
+                                    <p>60$</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="portfolio-item position-relative">
+                                <div class="overlay d-flex justify-content-center align-items-center">
+                                  <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                                </div>
+                                <img src="../assets/img/x57.jpg" class="w-100" alt="photo-1">
+                                <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                  <div class="desc">
+                                    <h3 class="m-0">Distinctive cake design</h3>
+                                    <p>35$</p>
+                                  </div>
+                                  <i class="fa-regular fa-heart"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="motion-tab-pane" role="tabpanel" aria-labelledby="motion-tab" tabindex="0">  <div class="row">
+                          <div class="col-md-4">
+                            <div class="portfolio-item position-relative">
+                              <div class="overlay d-flex justify-content-center align-items-center">
+                                <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                              </div>
+                              <img src="../assets/img/x41.jpg" class="w-100" alt="photo-1">
+                              <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                <div class="desc">
+                                  <h3 class="m-0">Creamy Coconut Cheesecake </h3>
+                                  <p>10$</p>
+                                </div>
+                                <i class="fa-regular fa-heart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="portfolio-item position-relative">
+                              <div class="overlay d-flex justify-content-center align-items-center">
+                                <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                              </div>
+                              <img src="../assets/img/x42.jpg" class="w-100" alt="photo-1">
+                              <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                <div class="desc">
+                                  <h3 class="m-0">Blueberry Swirl Coffee Cake Muffins</h3>
+                                  <p>15$</p>
+                                </div>
+                                <i class="fa-regular fa-heart"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="portfolio-item position-relative">
+                              <div class="overlay d-flex justify-content-center align-items-center">
+                                <a href="crud.html" target="_parent" ><i class="fa-brands fa-shopify"></i></a>
+                              </div>
+                              <img src="../assets/img/x43.jpg" class="w-100" alt="photo-1">
+                              <div class="info  p-3 d-flex justify-content-between align-items-center">
+                                <div class="desc">
+                                  <h3 class="m-0">Blueberry Cinnamon Rolls</h3>
+                                  <p>12$</p>
+                                </div>
+                                <i class="fa-regular fa-heart"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                  </section>
+                <!-- --------------------- -->
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+        <!-- sweet alert -->
+         <script src="sweetalert2.min.js"></script> 
+    <!-- custom js file -->
+    <script src="main.js"></script>
+    <script src="../vendor/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- bootstrap css -->
+     <link rel="stylesheet" href="../vendor/css/bootstrap.min.css">
+     <!-- fontawsome css -->
+     <link rel="stylesheet" href="../vendor/css/all.min.css">
+     <!-- custom css -->
+     <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<!-- -------- start Login------------ -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-4 offset-md-4 form-container">
+        <h2>Login</h2>
+        <form>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remember-me" name="remember-me">
+            <label class="form-check-label" for="remember-me">Remember me</label>
+          </div>
+          <span>Don't have an account?</span>
+          <a href="../signup/signup.html" target="_blank"><i class="fa-solid fa-right-to-bracket"></i></a>
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- ---end login---- -->
+    <script src="../vendor/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html>
